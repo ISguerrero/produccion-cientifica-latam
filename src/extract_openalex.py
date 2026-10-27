@@ -13,6 +13,9 @@ from pathlib import Path
 
 import pandas as pd
 import requests
+from dotenv import load_dotenv
+
+load_dotenv()
 
 BASE_URL = "https://api.openalex.org/works"
 API_KEY = os.environ.get("OPENALEX_API_KEY")
@@ -20,6 +23,7 @@ API_KEY = os.environ.get("OPENALEX_API_KEY")
 # Colombia y países de comparación (códigos ISO de 2 letras)
 COUNTRIES = {"CO": "Colombia", "BR": "Brasil", "MX": "México",
              "AR": "Argentina", "CL": "Chile", "PE": "Perú"}
+
 YEARS = "2000-2025"
 
 OUT_DIR = Path("data/raw")
